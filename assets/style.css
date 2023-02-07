@@ -1,0 +1,163 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header header header header"
+    "main main main main main main"
+    "footer footer footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    position: relative;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 5%;
+    text-align: center;
+    padding-top: 3%;
+    font-size: large;
+}
+
+.main :hover {
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: crimson;
+}
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: 1fr;
+    grid-template-areas: 
+    "phonenumber email";
+    margin-top: 5%;
+    text-align: center;
+    padding-top: 3%;
+    font-size: large;
+
+}
+
+#ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+    font-weight: bolder;
+    }
+
+
+#ul :hover {
+    color: crimson;
+    
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.phonenumber {
+    grid-area: phonenumber;
+}
+
+.email {
+    grid-area: email;
+}
+
+.copyright {
+    grid-area: copyright;
+}
+
+#copy {
+    padding-top: 5px;
+}
+
+.dropbtn {
+    background-color: #000000;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+
+.dropdown {
+    position: relative;
+    display: none;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: rgb(255, 255, 255);
+    font-weight: 1000;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+
+.dropdown:hover .dropbtn {
+    background-color: #e92902;
+}
+
+@media screen and (max-width:600px ) {
+    
+
+    #ul {
+        display: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 4fr);
+        
+    }
+
+}
+
+
